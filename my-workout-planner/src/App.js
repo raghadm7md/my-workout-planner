@@ -1,46 +1,28 @@
 import React, { Component } from "react";
+//import bootstrapCalendar from 'react-bootstrap-calendar' 
 import logo from "./logo.svg";
 import "./App.css";
-import Calendar from "./Calendar";
-
-const Planner = {
-  exercise: [
-    {
-      name: "sit-up",
-      part: "abs",
-      sets: 3,
-      reps: 15,
-      wight: "",
-    },
-  ],
-};
+import ToDay from './ToDay'
+import Data from './Data'
+import Progress from './Progress'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      exercise: Planner.exercise,
-    };
+      exercise: Data ,
+    }; 
   }
+
+
   render() {
+    let rr = this.state.exercise
+    console.log(rr)
     return (
       <div className="App">
-        {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
         <h1>welcome to your fitness journey</h1>
-        <Calendar exercise={this.state.exercise} />
+        <Progress/>
+        <ToDay exercise={this.state.exercise}/>
       </div>
     );
   }

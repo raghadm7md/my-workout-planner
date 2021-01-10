@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-//import bootstrapCalendar from 'react-bootstrap-calendar' 
-import logo from "./logo.svg";
 import "./App.css";
 import ToDay from './ToDay'
 import Data from './Data'

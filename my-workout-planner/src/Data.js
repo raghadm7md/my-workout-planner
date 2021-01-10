@@ -34,141 +34,141 @@ const Exercises ={
         "reps": 20,
       }],
     Arms:[{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Alternate Hammer Curl",
+        "image":"https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Static_Arm_Curl_F_WorkoutLabs.png",
         "sets": 3,
-        "reps": 20,
-        "wight": ""
+        "reps": 12,
+        "weight": "10 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Arm Tricep Kickbacks",
+        "image": "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Bent_Over_Double_Arm_Tricep_Kickbacks-1.png",
         "sets": 3,
-        "reps": 20,
-        "wight": ""
+        "reps": 12,
+        "weight": "5 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Chair / Bench Tricep Dips",
+        "image": "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Chair_Tricep_Dip_F_WorkoutLabs.png",
         "sets": 3,
-        "reps": 20,
-        "wight": ""
+        "reps": 12,
+        "weight": ""
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Two Arm Dumbbell Front Shoulder",
+        "image": "https://i.pinimg.com/originals/2e/15/11/2e1511ce61dbf7dccbf5f329d1c56226.png",
         "sets": 3,
-        "reps": 20,
-        "wight": ""
+        "reps": 12,
+        "weight": "5 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Flyes",
+        "image": "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Two_Armed_Bent_Over_Flyes-1.png",
         "sets": 3,
-        "reps": 20,
-        "wight": ""
+        "reps": 12,
+        "weight": "5 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Seated Dumbbell Bicep Curls",
+        "image": "https://i.pinimg.com/originals/de/40/17/de4017b5eb0c3d117d1f1f8e1431f7c6.png",
         "sets": 3,
-        "reps": 20,
-        "wight": ""
+        "reps": 12,
+        "weight":"10 lbs"
       },],
     back:[{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },],
     chest:[{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },],
     fullbody:[{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },],
     legs:[{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },{
         "name": "Pushup",
         "part": "Arms",
         "sets": 3,
         "reps": 20,
-        "wight": ""
+        "weight": ""
       },]  
 }
 

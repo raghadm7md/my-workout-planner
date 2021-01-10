@@ -1,10 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Calendar from "./Calendar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+const Planner = {
+  exercise: [
+    {
+      name: "sit-up",
+      part: "abs",
+      sets: 3,
+      reps: 15,
+      wight: "",
+    },
+  ],
+};
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      exercise: Planner.exercise,
+    };
+  }
+  render() {
+    return (
+      <div className="App">
+        {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +38,12 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
+      </header> */}
+        <h1>welcome to your fitness journey</h1>
+        <Calendar exercise={this.state.exercise} />
+      </div>
+    );
+  }
 }
 
 export default App;

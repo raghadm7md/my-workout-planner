@@ -5,7 +5,6 @@ export default class AbsDay extends Component {
     return (
       <div className="Ex">
         <div class="container">
-        <button>Edit</button>
           <div class="row">
             <div class="col"><h2>{this.props.Ex_Abs}</h2></div>
             <div class="col"><img src={this.props.image} width={150}/></div>

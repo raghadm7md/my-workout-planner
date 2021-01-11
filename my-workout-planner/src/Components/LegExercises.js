@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
-import AbsDay from "./AbsDay";
+import LegsDay from "./LegsDay";
 
-export default class AbsExercises extends Component {
+export default class LegExercises extends Component {
     render() {
-        const Abs = this.props.Abs.map((item , index) => {
+        const legs = this.props.legs.map((item, index) => {
             return (
-              <AbsDay
-                Ex_Abs={item.name}
+              <LegsDay
+                Ex_Arms={item.name}
                 key={index}
                 rep={item.reps}
                 set={item.sets}
                 image={item.image}
+                weight={item.weight}
               />
             );
           });
         return (
             <div>
-              {Abs}  
+               {legs} 
             </div>
         )
     }

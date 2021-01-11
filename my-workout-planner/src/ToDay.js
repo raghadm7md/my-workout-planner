@@ -1,13 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import AbsDay from "./Components/AbsDay";
-import ArmsDay from "./Components/ArmsDay";
-import ChestDay from "./Components/ChestDay";
-import BackDay from "./Components/BackDay";
-import FullBody from "./Components/FullBody";
-import LegsDay from "./Components/LegsDay";
 import AbsExercises from "./Components/AbsExercises";
 import ArmsExercises from "./Components/ArmsExercises";
+import LegExercises from './Components/LegExercises'
 
 class ToDay extends Component {
   render() {
@@ -17,6 +12,8 @@ class ToDay extends Component {
           <Link to="/Abs">Abs workout</Link>
           <span> || </span>
           <Link to="/Arms">Arms workout </Link>
+          <span> || </span>
+          <Link to="/Legs">legs workout </Link>
 
           <div class="container">
             <div class="row row-cols-2">
@@ -33,6 +30,13 @@ class ToDay extends Component {
                   path="/Arms"
                   render={(props) => (
                     <ArmsExercises {...props} Arms={this.props.exercise.Arms} />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/legs"
+                  render={(props) => (
+                    <LegExercises {...props} legs={this.props.exercise.legs} />
                   )}
                 />
               </div>

@@ -12,7 +12,6 @@ class App extends Component {
     }; 
   }
 
-
   render() {
     let rr = this.state.exercise
     console.log(rr)

@@ -1,23 +1,14 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AbsDay from "./Components/AbsDay";
 import ArmsDay from "./Components/ArmsDay";
 import ChestDay from "./Components/ChestDay";
 import BackDay from "./Components/BackDay";
 import FullBody from "./Components/FullBody";
 import LegsDay from "./Components/LegsDay";
-
+import AbsExercises from "./Components/AbsExercises";
 class ToDay extends Component {
   render() {
-    const Abs = this.props.exercise.Abs.map((item) => {
-      return (
-        <AbsDay
-          Ex_Abs={item.name}
-          rep={item.reps}
-          set={item.sets}
-          image={item.image}
-        />
-      );
-    });
     const Arms = this.props.exercise.Arms.map((item) => {
       return (
         <ArmsDay
@@ -30,20 +21,26 @@ class ToDay extends Component {
       );
     });
     return (
-      <div>
-        <BackDay />
-        <ChestDay />
-        <FullBody />
-        <LegsDay />
-        <div class="container">
-          <div class="row row-cols-2">
-            <div class="col">{Abs} {Arms}</div>
-            <div class="col">
-              <h1>the history</h1>
+      <Router>
+        <div>
+          <Link to="/Abs">Abs workout </Link>
+          <div class="container">
+            <div class="row row-cols-2">
+              <div class="col">
+                <Route
+                  exact path="/Abs"
+                  render={(props) => (
+                    <AbsExercises {...props} Abs={this.props.exercise.Abs} />
+                  )}
+                />
+              </div>
+              <div class="col">
+                <h1>the history</h1>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }

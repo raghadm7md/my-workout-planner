@@ -71,104 +71,79 @@ const Exercises ={
         "weight":"10 lbs"
       },],
     back:[{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Pull Downs",
+        "image": "https://i.pinimg.com/originals/54/61/90/5461903958f37755384a2043fc010c40.png",
         "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "reps": 14,
+        "weight":"10 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Low Cable Back Rows",
+        "image": "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Seated_Low_Cable_Row_F_WorkoutLabs.png",
         "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "reps": 15,
+        "weight": "15 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "One Arm Dumbbell Bench Rows",
+        "image": "https://i.pinimg.com/originals/6b/dd/dd/6bdddd23e7303b3acd4eab026c8b294f.png",
         "sets": 3,
         "reps": 20,
-        "weight": ""
+        "weight": "20 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Bent-Over Rows",
+        "image": "https://www.simplygym.net/wp-content/uploads/2017/10/Two_Armed_Bent_Over_Row.png",
         "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "reps": 15,
+        "weight": "15 lbs"
       },],
     chest:[{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Ball Chest Dumbbell Flyes",
+        "image": "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Bosu_Ball_Dumbbell_Chest_Flyes.png",
         "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "reps": 15,
+        "weight": "5 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Dumbbell Flat Bench Press",
+        "image": "https://i.pinimg.com/originals/e0/31/02/e03102aac424b370503af141645f5524.png",
         "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "reps": 15,
+        "weight": "5 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Decline Bench Dumbbell Press",
+        "image": "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Decline-_Dumbbell_Press_F_WorkoutLabs.png",
         "sets": 3,
-        "reps": 20,
-        "weight": ""
-      },],
-    fullbody:[{
-        "name": "Pushup",
-        "part": "Arms",
-        "sets": 3,
-        "reps": 20,
-        "weight": ""
-      },{
-        "name": "Pushup",
-        "part": "Arms",
-        "sets": 3,
-        "reps": 20,
-        "weight": ""
-      },{
-        "name": "Pushup",
-        "part": "Arms",
-        "sets": 3,
-        "reps": 20,
-        "weight": ""
-      },{
-        "name": "Pushup",
-        "part": "Arms",
-        "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "reps": 15,
+        "weight": "5 lbs"
       },],
     legs:[{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Deadlift",
+        "image": "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Romanian_Deadlift_F_WorkoutLabs.png",
         "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "reps": 15,
+        "weight": "15 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Walking Lunges",
+        "image": "https://i.pinimg.com/originals/95/57/db/9557db03d4fe5d60da6080fe6fcd6e27.png",
         "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "reps": 12,
+        "weight": "10 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
-        "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "name": "Barbell Hip Thrusts",
+        "image": "https://i.pinimg.com/originals/2e/42/7e/2e427ef878cd2704c088f152ae7d7c2e.png",
+        "sets": 4,
+        "reps": 15,
+        "weight": "25 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
-        "sets": 3,
+        "name": "Dumbbell Step-Ups",
+        "image": "https://workoutlabs.com/train/svg.php?id=31488&ext=png",
+        "sets": 4,
         "reps": 20,
-        "weight": ""
+        "weight": "10 lbs"
       },{
-        "name": "Pushup",
-        "part": "Arms",
+        "name": "Barbell Squats",
+        "image": "https://i.pinimg.com/originals/36/0b/f2/360bf2a43639f2cdc93e53978b72e79e.png",
         "sets": 3,
-        "reps": 20,
-        "weight": ""
+        "reps": 15,
+        "weight": "20 lbs"
       },]  
 }
 

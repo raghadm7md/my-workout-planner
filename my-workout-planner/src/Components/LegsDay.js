@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import EditExercise from "./EditExercise";
 
-
 export default class LegsDay extends Component {
   constructor(props) {
     super(props);

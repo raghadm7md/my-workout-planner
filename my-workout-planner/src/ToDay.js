@@ -7,30 +7,32 @@ import BackDay from "./Components/BackDay";
 import FullBody from "./Components/FullBody";
 import LegsDay from "./Components/LegsDay";
 import AbsExercises from "./Components/AbsExercises";
+import ArmsExercises from "./Components/ArmsExercises";
+
 class ToDay extends Component {
   render() {
-    const Arms = this.props.exercise.Arms.map((item) => {
-      return (
-        <ArmsDay
-          Ex_Arms={item.name}
-          rep={item.reps}
-          set={item.sets}
-          image={item.image}
-          weight={item.weight}
-        />
-      );
-    });
     return (
       <Router>
         <div>
-          <Link to="/Abs">Abs workout </Link>
+          <Link to="/Abs">Abs workout</Link>
+          <span> || </span>
+          <Link to="/Arms">Arms workout </Link>
+
           <div class="container">
             <div class="row row-cols-2">
               <div class="col">
                 <Route
-                  exact path="/Abs"
+                  exact
+                  path="/Abs"
                   render={(props) => (
                     <AbsExercises {...props} Abs={this.props.exercise.Abs} />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/Arms"
+                  render={(props) => (
+                    <ArmsExercises {...props} Arms={this.props.exercise.Arms} />
                   )}
                 />
               </div>

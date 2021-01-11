@@ -3,6 +3,7 @@ import "./App.css";
 import ToDay from './ToDay'
 import Data from './Data'
 import Progress from './Progress'
+import ArmsDay from "./Components/ArmsDay";
 
 class App extends Component {
   constructor() {
@@ -11,7 +12,6 @@ class App extends Component {
       exercise: Data ,
     }; 
   }
-
   render() {
     let rr = this.state.exercise
     console.log(rr)

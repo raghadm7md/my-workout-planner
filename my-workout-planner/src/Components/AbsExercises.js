@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AbsDay from "./AbsDay";
-
+import EditExercise from './EditExercise';
 
 export default class AbsExercises extends Component {
     render() {

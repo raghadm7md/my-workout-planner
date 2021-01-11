@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import EditExercise from "./EditExercise";
 
 export default class ArmsDay extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       showComponent: false,
+      weight : this.props.weight
     };
   }
   EditAbsExercises = () => {
@@ -16,12 +17,16 @@ export default class ArmsDay extends Component {
     this.setState({ showComponent: false });
     console.log(this.state.showComponent)
   };
+  UpdateEx_weight=(newUpdate)=>{
+    this.setState({ weight :newUpdate})
+  }
   render() {
+
     return (
       <div className="Ex">
         <div class="container">
           <button onClick={this.EditAbsExercises} class="btn btn-secondary" >Edit</button>
-          {this.state.showComponent ? <EditExercise hide={this.hide}/> : null}
+          {this.state.showComponent ? <EditExercise hide={this.hide} Update={this.UpdateEx_weight}/> : null}
           <div class="row">
             <div class="col">
               <h2>{this.props.Ex_Arms}</h2>
@@ -38,7 +43,7 @@ export default class ArmsDay extends Component {
               <h4>Sets = {this.props.rep}</h4>
             </div>
             <div class="col">
-              <h4>weight = {this.props.weight}</h4>
+              <h4>weight = {this.state.weight}</h4>
             </div>
           </div>
         </div>

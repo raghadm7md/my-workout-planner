@@ -9,6 +9,9 @@ export default class ArmsExercises extends Component {
   //     weight : this.props.Arms.weight
   //   };
   // }
+//   removeItem=(index)=>{
+// this.props.Arms
+//   }
   render() {
     const Arms = this.props.Arms.map((item, index) => {
       return (

@@ -17,9 +17,19 @@ export default class ArmsDay extends Component {
     this.setState({ showComponent: false });
     console.log(this.state.showComponent);
   };
+  //######################
   UpdateEx_weight = (newUpdate) => {
     this.setState({ weight: newUpdate });
+    const newweight = this.state.weight;
+    console.log(newweight)
+   localStorage.setItem('newweight', newUpdate);
+   console.log(localStorage)
   };
+//#################
+  componentDidMount() {
+    const newweight = localStorage.getItem('newweight');
+    this.setState({ weight:newweight });
+  }
   render() {
     return (
       <div className="Ex">
@@ -49,7 +59,9 @@ export default class ArmsDay extends Component {
               <h4>weight = {this.state.weight}</h4>
             </div>
           </div>
-          <button class="btn btn-secondary"> delete</button>
+          <button onClick={this.RemoveItem = (event)=>{
+            
+          }} class="btn btn-secondary"> delete</button>
         </div>
       </div>
     );

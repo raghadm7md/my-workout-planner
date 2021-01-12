@@ -10,6 +10,7 @@ export default class EditExercise extends Component {
   Updateweight =(event)=>{
     event.preventDefault();
     this.props.Update(this.state.weight);
+    this.props.hide();
   }
 
   render() {

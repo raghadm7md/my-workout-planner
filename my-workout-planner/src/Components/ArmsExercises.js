@@ -3,6 +3,12 @@ import ToDay from "../ToDay";
 import ArmsDay from "./ArmsDay";
 
 export default class ArmsExercises extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     weight : this.props.Arms.weight
+  //   };
+  // }
   render() {
     const Arms = this.props.Arms.map((item, index) => {
       return (

@@ -20,18 +20,21 @@ export default class ArmsDay extends Component {
   //######################
   UpdateEx_weight = (newUpdate) => {
     this.setState({ weight: newUpdate });
-    const newweight = this.state.weight;
-    console.log(newweight);
-    localStorage.setItem("newweight", newUpdate);
-    console.log(localStorage);
+   // const newweight = this.state.weight;
+    console.log(newUpdate);
+    this.props.edit(newUpdate , this.props.Ex_Arms )
+
+    // localStorage.setItem("newweight", newUpdate);
+    // console.log(localStorage);
   };
   //#################
-  componentDidMount() {
-    const newweight = localStorage.getItem("newweight");
-    console.log(newweight);
-    this.setState({ weight: newweight });
-  }
-
+  // componentDidMount() {
+  //   const newweight = localStorage.getItem("newweight");
+  //   console.log(newweight);
+  //   this.setState({ weight: newweight });
+  //   this.props.edit(newweight)
+  // }
+  //#################
   handelClike = (event) => {
     event.preventDefault();
     this.props.remove(this.props.Ex_Arms);
@@ -74,7 +77,7 @@ export default class ArmsDay extends Component {
               <h4>Sets= {this.props.rep}</h4>
             </div>
             <div class="col">
-              <h4>weight= {this.state.weight}</h4>
+              <h4>weight= {this.props.weight}</h4>
             </div>
           </div>
           <button

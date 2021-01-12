@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ToDay from "../ToDay";
 import ArmsDay from "./ArmsDay";
 
 export default class ArmsExercises extends Component {
@@ -19,6 +18,24 @@ export default class ArmsExercises extends Component {
       }
     }
   };
+  EditItem=(newW , item)=>{
+    const arr = this.state.Arms;
+    console.log(arr)
+   for (let i = 0; i < arr.length; i++) {
+     if (arr[i].name === item) {
+       let val = arr[i]
+       val.weight=newW
+       let varr =arr.findIndex((element,index)=>{
+           if (element === val){
+            arr.splice(index , 1, val);
+            this.setState({Arms : arr})
+           }
+       })
+       console.log(arr)
+     }
+   }
+
+  }
   componentDidMount() {
     this.setState({ Arms: this.props.Arms });
   }
@@ -33,6 +50,7 @@ export default class ArmsExercises extends Component {
           image={item.image}
           weight={item.weight}
           remove={this.removeItem}
+          edit={this.EditItem}
         />
       );
     });

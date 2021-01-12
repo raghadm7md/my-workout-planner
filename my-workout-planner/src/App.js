@@ -13,12 +13,12 @@ class App extends Component {
     }; 
   }
   render() {
-    let rr = this.state.exercise
-    console.log(rr)
+    // let rr = this.state.exercise
+    // console.log(rr)
     return (
       <div className="App">
         <h1>welcome to your fitness journey</h1>
-        <Progress/>
+        <Progress exercise={this.state.exercise}/>
         <ToDay exercise={this.state.exercise}/>
       </div>
     );

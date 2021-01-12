@@ -21,20 +21,23 @@ export default class ArmsDay extends Component {
   UpdateEx_weight = (newUpdate) => {
     this.setState({ weight: newUpdate });
     const newweight = this.state.weight;
-    console.log(newweight)
-   localStorage.setItem('newweight', newUpdate);
-   console.log(localStorage)
+    console.log(newweight);
+    localStorage.setItem("newweight", newUpdate);
+    console.log(localStorage);
   };
-//#################
+  //#################
   componentDidMount() {
-    const newweight = localStorage.getItem('newweight');
-    this.setState({ weight:newweight });
+    const newweight = localStorage.getItem("newweight");
+    console.log(newweight)
+    this.setState({ weight: newweight });
+    
   }
+
   render() {
     return (
       <div className="Ex">
         <div class="container">
-        <button onClick={this.EditAbsExercises} class="btn btn-secondary">
+          <button onClick={this.EditAbsExercises} class="btn btn-secondary">
             Edit
           </button>
           {this.state.showComponent ? (
@@ -45,23 +48,35 @@ export default class ArmsDay extends Component {
               <h2>{this.props.Ex_Arms}</h2>
             </div>
             <div class="col">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="true"
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="defaultCheck1">
+                  Default checkbox
+                </label>
+              </div>
               <img src={this.props.image} width={150} />
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <h4>Reps = {this.props.set}</h4>
+              <h4>Reps= {this.props.set}</h4>
             </div>
             <div class="col">
-              <h4>Sets = {this.props.rep}</h4>
+              <h4>Sets= {this.props.rep}</h4>
             </div>
             <div class="col">
-              <h4>weight = {this.state.weight}</h4>
+              <h4>weight= {this.state.weight}</h4>
             </div>
           </div>
-          <button onClick={this.RemoveItem = (event)=>{
-            
-          }} class="btn btn-secondary"> delete</button>
+          <button onClick={this.props.remove} class="btn btn-secondary">
+            {" "}
+            delete
+          </button>
         </div>
       </div>
     );

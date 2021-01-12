@@ -5,8 +5,10 @@ import ArmsExercises from "./Components/ArmsExercises";
 import BackExercise from "./Components/BackExercise";
 import LegExercises from "./Components/LegExercises";
 import ChestExercise from "./Components/ChestExercise";
+import Progress from "./Progress";
 
 class ToDay extends Component {
+  
   render() {
     return (
       <Router>
@@ -57,9 +59,10 @@ class ToDay extends Component {
                     />
                   )}
                 />
+                
               </div>
               <div class="col">
-                <h1>the history</h1>
+                <h1><Progress/></h1>
               </div>
             </div>
           </div>

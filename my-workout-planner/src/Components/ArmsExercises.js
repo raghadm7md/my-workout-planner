@@ -3,17 +3,20 @@ import ToDay from "../ToDay";
 import ArmsDay from "./ArmsDay";
 
 export default class ArmsExercises extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     weight : this.props.Arms.weight
-  //   };
-  // }
-//   removeItem=(index)=>{
-// this.props.Arms
-//   }
+  constructor(props) {
+    super(props);
+    this.state = {
+      Arms: this.props.Arms,
+    };
+  }
+  removeItem = (index) => {
+    const arr = this.state.Arms;
+    arr.splice(index, 1);
+    console.log(arr)
+    this.setState({ Arms: arr });
+  };
   render() {
-    const Arms = this.props.Arms.map((item, index) => {
+    const Arms = this.state.Arms.map((item, index) => {
       return (
         <ArmsDay
           Ex_Arms={item.name}
@@ -22,6 +25,7 @@ export default class ArmsExercises extends Component {
           set={item.sets}
           image={item.image}
           weight={item.weight}
+          remove={this.removeItem}
         />
       );
     });

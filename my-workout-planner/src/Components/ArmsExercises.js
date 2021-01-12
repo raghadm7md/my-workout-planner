@@ -9,12 +9,19 @@ export default class ArmsExercises extends Component {
       Arms: this.props.Arms,
     };
   }
-  removeItem = (index) => {
+  removeItem = (ExName) => {
     const arr = this.state.Arms;
-    arr.splice(index, 1);
-    console.log(arr)
-    this.setState({ Arms: arr });
+     console.log(arr)
+    for (let i = 0; i < this.state.Arms.length; i++) {
+      if (this.state.Arms[i].name === ExName) {
+        arr.splice(i, 1);
+        this.setState({ Arms: arr });
+      }
+    }
   };
+  componentDidMount() {
+    this.setState({ Arms: this.props.Arms });
+  }
   render() {
     const Arms = this.state.Arms.map((item, index) => {
       return (
@@ -29,10 +36,6 @@ export default class ArmsExercises extends Component {
         />
       );
     });
-    return (
-      <div>
-        {Arms}
-      </div>
-    );
+    return <div>{Arms}</div>;
   }
 }

@@ -28,10 +28,14 @@ export default class ArmsDay extends Component {
   //#################
   componentDidMount() {
     const newweight = localStorage.getItem("newweight");
-    console.log(newweight)
+    console.log(newweight);
     this.setState({ weight: newweight });
-    
   }
+
+  handelClike = (event) => {
+    event.preventDefault();
+    this.props.remove(this.props.Ex_Arms);
+  };
 
   render() {
     return (
@@ -73,8 +77,10 @@ export default class ArmsDay extends Component {
               <h4>weight= {this.state.weight}</h4>
             </div>
           </div>
-          <button onClick={this.props.remove} class="btn btn-secondary">
-            {" "}
+          <button
+            onClick={this.handelClike}
+            class="btn btn-secondary"
+          >
             delete
           </button>
         </div>

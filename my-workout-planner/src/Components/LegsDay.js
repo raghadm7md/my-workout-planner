@@ -19,6 +19,12 @@ export default class LegsDay extends Component {
   };
   UpdateEx_weight = (newUpdate) => {
     this.setState({ weight: newUpdate });
+    console.log(newUpdate);
+    this.props.edit(newUpdate, this.props.Ex_legs);
+  };
+  handelClike = (event) => {
+    event.preventDefault();
+    this.props.remove(this.props.Ex_legs);
   };
   render() {
     return (
@@ -32,23 +38,37 @@ export default class LegsDay extends Component {
           ) : null}
           <div class="row">
             <div class="col">
-              <h2>{this.props.Ex_Arms}</h2>
+              <h2>{this.props.Ex_legs}</h2>
             </div>
             <div class="col">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  //#######################
+                  value={this.state.Exercises}
+                  checked={this.state.isChecked}
+                  onChange={(event) => this.toggleCheckboxChange(event)}
+                />
+                <label class="form-check-label">Did it!!</label>
+              </div>
               <img src={this.props.image} width={150} />
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <h4>Reps = {this.props.set}</h4>
+              <h4>Reps= {this.props.set}</h4>
             </div>
             <div class="col">
-              <h4>Sets = {this.props.rep}</h4>
+              <h4>Sets= {this.props.rep}</h4>
             </div>
             <div class="col">
-              <h4>weight = {this.state.weight}</h4>
+              <h4>weight= {this.props.weight}</h4>
             </div>
           </div>
+          <button onClick={this.handelClike} class="btn btn-secondary">
+            delete
+          </button>
         </div>
       </div>
     );

@@ -10,35 +10,34 @@ export default class ArmsExercises extends Component {
   }
   removeItem = (ExName) => {
     const arr = this.state.Arms;
-     console.log(arr)
-    for (let i = 0; i < this.state.Arms.length; i++) {
-      if (this.state.Arms[i].name === ExName) {
+    console.log(arr);
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].name === ExName) {
         arr.splice(i, 1);
         this.setState({ Arms: arr });
       }
     }
   };
-  EditItem=(newW , item)=>{
-    const arr = this.state.Arms;
-    console.log(arr)
-   for (let i = 0; i < arr.length; i++) {
-     if (arr[i].name === item) {
-       let val = arr[i]
-       val.weight=newW
-       let varr =arr.findIndex((element,index)=>{
-           if (element === val){
-            arr.splice(index , 1, val);
-            this.setState({Arms : arr})
-           }
-       })
-       console.log(arr)
-     }
-   }
-
-  }
-  componentDidMount() {
-    this.setState({ Arms: this.props.Arms });
-  }
+  EditItem = (newW, item) => {
+    const newArray = this.state.Arms;
+    console.log(newArray);
+    for (let i = 0; i < newArray.length; i++) {
+      if (newArray[i].name === item) {
+        let val = newArray[i];
+        val.weight = newW;
+        newArray.findIndex((element, index) => {
+          if (element === val) {
+            newArray.splice(index, 1, val);
+            this.setState({ Arms: newArray });
+          }
+        });
+        console.log(newArray);
+      }
+    }
+  };
+  // componentDidMount() {
+  //   this.setState({ Arms: this.props.Arms });
+  // }
   render() {
     const Arms = this.state.Arms.map((item, index) => {
       return (
@@ -51,6 +50,7 @@ export default class ArmsExercises extends Component {
           weight={item.weight}
           remove={this.removeItem}
           edit={this.EditItem}
+          addToHistory={item}
         />
       );
     });

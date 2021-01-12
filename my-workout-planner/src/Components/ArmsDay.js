@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import EditExercise from "./EditExercise";
+import Progress from "./Progress";
+
 
 export default class ArmsDay extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showComponent: false,
-      weight: this.props.weight,
+      weight: this.props.weight ,
+      //#######################
+      Exercises : this.props.addToHistory ,
+      isChecked: false,
+      litsOfEx: [],
     };
   }
   EditAbsExercises = () => {
@@ -20,27 +26,29 @@ export default class ArmsDay extends Component {
   //######################
   UpdateEx_weight = (newUpdate) => {
     this.setState({ weight: newUpdate });
-   // const newweight = this.state.weight;
     console.log(newUpdate);
     this.props.edit(newUpdate , this.props.Ex_Arms )
-
-    // localStorage.setItem("newweight", newUpdate);
-    // console.log(localStorage);
   };
-  //#################
-  // componentDidMount() {
-  //   const newweight = localStorage.getItem("newweight");
-  //   console.log(newweight);
-  //   this.setState({ weight: newweight });
-  //   this.props.edit(newweight)
-  // }
+  
+  componentWillMount = () => {
+    this.selectedCheckboxes = new Set();
+  }
   //#################
   handelClike = (event) => {
     event.preventDefault();
     this.props.remove(this.props.Ex_Arms);
   };
 
+  toggleCheckboxChange = () => {
+    this.setState(({ isChecked }) => (
+      {
+        isChecked: !isChecked,
+      }
+    ));
+    this.props.AddExercise(this.state.Exercises)
+  }
   render() {
+    
     return (
       <div className="Ex">
         <div class="container">
@@ -59,11 +67,13 @@ export default class ArmsDay extends Component {
                 <input
                   class="form-check-input"
                   type="checkbox"
-                  value="true"
-                  id="defaultCheck1"
+                        //#######################
+                  value={this.state.Exercises}
+                  checked={this.state.isChecked}
+                  onChange={event => this.toggleCheckboxChange(event)}
                 />
-                <label class="form-check-label" for="defaultCheck1">
-                  Default checkbox
+                <label class="form-check-label" >
+                  Did it!!
                 </label>
               </div>
               <img src={this.props.image} width={150} />
@@ -91,3 +101,18 @@ export default class ArmsDay extends Component {
     );
   }
 }
+
+
+   // const newweight = this.state.weight;
+
+
+// localStorage.setItem("newweight", newUpdate);
+    // console.log(localStorage);
+
+// #################
+  // componentDidMount() {
+  //   const newweight = localStorage.getItem("newweight");
+  //   console.log(newweight);
+  //   this.setState({ weight: newweight });
+  //   this.props.edit(newweight)
+  // }

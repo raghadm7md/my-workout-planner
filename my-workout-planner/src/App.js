@@ -14,11 +14,11 @@ class App extends Component {
       Sets: "",
       Reps: "",
       Weight: "",
-      Body: "",
+      radio:'',
+  
     };
     this.formSubmit = this.formSubmit.bind(this);
   }
-
   componentDidMount() {
     // let API =`http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en`
     //   axios.get(API)
@@ -40,27 +40,30 @@ class App extends Component {
     let sets = this.state.Sets;
     let reps = this.state.Reps;
     let weight = this.state.Weight;
-    let body = this.state.Body;
+    let radio = this.state.radio;
+    let body = [...this.state.Body]
     let NewData = this.state.exercise;
-    
+    const obj ={
+        "name": name,
+        "image":"",
+        "sets": sets,
+        "reps": reps,
+        "weight":weight
+      }
     for (const key in NewData) {
-      if ( key === body ){
-        body.push({
-          "name": name,
-          "image":"",
-          "sets": sets,
-          "reps": reps,
-          "weight":weight
-        })
+      if ( key === radio ){
+       // let body = NewData.radio
+        console.log(key + "  "+body)
+        body.push(obj)
+        NewData[radio] = [...body];
       }
     }
-    this.setState({Body : body})
+    console.log(body)
+    console.log(NewData)
+    //this.setState({Body : body})
   };
   render() {
-    // console.log(this.state.ExerciseName);
-    // console.log(this.state.Sets);
-    // console.log(this.state.Reps);
-    // console.log(this.state.Weight);
+    
     console.log(this.state.Body);
     return (
       <div className="App">
@@ -69,6 +72,7 @@ class App extends Component {
         <div>
           <form className="form" onSubmit={this.formSubmit} >
             Add your workout HERE!
+            <div>
             <label>Exercise name: </label>
             <input
               type="text"
@@ -97,46 +101,57 @@ class App extends Component {
                 this.setState({ Weight: event.target.value });
               }}
             />
+            </div>
+            <div>
             <input
               type="radio"
               value="Arms"
               onChange={(event) => {
-                this.setState({ Body: event.target.value });
+                this.setState({ radio: event.target.value });
               }}
             />
             <label for="male"> It is for your Arms?</label>
+            </div>
+            <div>
             <input
               type="radio"
               value="Abs"
               onChange={(event) => {
-                this.setState({ Body: event.target.value });
+                this.setState({ radio: event.target.value });
               }}
             />
             <label for="male"> It is for your Abs ?</label>
+            </div>
+            <div>
             <input
               type="radio"
               value="legs"
               onChange={(event) => {
-                this.setState({ Body: event.target.value });
+                this.setState({ radio: event.target.value });
               }}
             />
             <label for="male"> It is for your Legs ?</label>
+            </div>
+            <div>
             <input
               type="radio"
               value="back"
               onChange={(event) => {
-                this.setState({ Body: event.target.value });
+                this.setState({ radio: event.target.value });
               }}
             />
             <label for="male"> It is for your Back ?</label>
+            </div>
+            <div>
             <input
               type="radio"
               value="chest"
               onChange={(event) => {
-                this.setState({ Body: event.target.value });
+                this.setState({ radio: event.target.value });
               }}
             />
             <label for="male"> It is for your Chest ?</label>
+            </div>
             <button type="submit" >Submit</button>
           </form>
         </div>

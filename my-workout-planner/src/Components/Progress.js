@@ -10,14 +10,11 @@ class Progress extends Component {
     };
     
   }
-  AddExercise=(item) => {
-    this.setState({litsOfEx : item})
-    console.log(item)
-  };
+  
   render() {
     return (
       <div>
-        <ArmsDay AddExercise={this.AddExercise}/>
+        {/* <ArmsDay AddExercise={this.AddExercise}/> */}
         <h1>Your history will be here</h1>
       </div>
     );

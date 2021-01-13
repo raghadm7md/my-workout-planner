@@ -40,7 +40,7 @@ export default class ChestDay extends Component {
               <h2>{this.props.Ex_Chest}</h2>
             </div>
             <div class="col">
-              <div class="form-check">
+              {/* <div class="form-check">
                 <input
                   class="form-check-input"
                   type="checkbox"
@@ -49,7 +49,7 @@ export default class ChestDay extends Component {
                   onChange={(event) => this.toggleCheckboxChange(event)}
                 />
                 <label class="form-check-label">Did it!!</label>
-              </div>
+              </div> */}
               <img src={this.props.image} width={150} />
             </div>
           </div>

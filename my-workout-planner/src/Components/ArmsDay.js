@@ -2,15 +2,14 @@ import React, { Component } from "react";
 import EditExercise from "./EditExercise";
 import Progress from "./Progress";
 
-
 export default class ArmsDay extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showComponent: false,
-      weight: this.props.weight ,
+      weight: this.props.weight,
       //#######################
-      Exercises : this.props.addToHistory ,
+      Exercise: this.props.addToHistory,
       isChecked: false,
       litsOfEx: [],
     };
@@ -27,12 +26,12 @@ export default class ArmsDay extends Component {
   UpdateEx_weight = (newUpdate) => {
     this.setState({ weight: newUpdate });
     console.log(newUpdate);
-    this.props.edit(newUpdate , this.props.Ex_Arms )
+    this.props.edit(newUpdate, this.props.Ex_Arms);
   };
-  
-  componentWillMount = () => {
-    this.selectedCheckboxes = new Set();
-  }
+
+  // componentWillMount = () => {
+  //   this.selectedCheckboxes = new Set();
+  // }
   //#################
   handelClike = (event) => {
     event.preventDefault();
@@ -40,15 +39,15 @@ export default class ArmsDay extends Component {
   };
 
   toggleCheckboxChange = () => {
-    this.setState(({ isChecked }) => (
-      {
-        isChecked: !isChecked,
-      }
-    ));
-    this.props.AddExercise(this.state.Exercises)
-  }
+    // if (this.state.Exercise.Done === undefined) {
+    //   this.state.Exercise["Done"] = true;
+      this.props.add(this.state.Exercise, this.props.num);
+    //   console.log(this.state.Exercise);
+    // } else {
+    //   this.props.add(this.state.Exercise);
+    // }
+  };
   render() {
-    
     return (
       <div className="Ex">
         <div class="container">
@@ -63,19 +62,9 @@ export default class ArmsDay extends Component {
               <h2>{this.props.Ex_Arms}</h2>
             </div>
             <div class="col">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                        //#######################
-                  value={this.state.Exercises}
-                  checked={this.state.isChecked}
-                  onChange={event => this.toggleCheckboxChange(event)}
-                />
-                <label class="form-check-label" >
-                  Did it!!
-                </label>
-              </div>
+              <button onClick={this.toggleCheckboxChange}> 
+              {this.state.Exercise.done? "yaaaaa!!" : "Done it "}
+               </button>
               <img src={this.props.image} width={150} />
             </div>
           </div>
@@ -90,10 +79,7 @@ export default class ArmsDay extends Component {
               <h4>weight= {this.props.weight}</h4>
             </div>
           </div>
-          <button
-            onClick={this.handelClike}
-            class="btn btn-secondary"
-          >
+          <button onClick={this.handelClike} class="btn btn-secondary">
             delete
           </button>
         </div>
@@ -102,17 +88,15 @@ export default class ArmsDay extends Component {
   }
 }
 
-
-   // const newweight = this.state.weight;
-
+// const newweight = this.state.weight;
 
 // localStorage.setItem("newweight", newUpdate);
-    // console.log(localStorage);
+// console.log(localStorage);
 
 // #################
-  // componentDidMount() {
-  //   const newweight = localStorage.getItem("newweight");
-  //   console.log(newweight);
-  //   this.setState({ weight: newweight });
-  //   this.props.edit(newweight)
-  // }
+// componentDidMount() {
+//   const newweight = localStorage.getItem("newweight");
+//   console.log(newweight);
+//   this.setState({ weight: newweight });
+//   this.props.edit(newweight)
+// }

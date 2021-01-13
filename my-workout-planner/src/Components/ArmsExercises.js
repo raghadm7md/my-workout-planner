@@ -6,6 +6,7 @@ export default class ArmsExercises extends Component {
     super(props);
     this.state = {
       Arms: this.props.Arms,
+      // DoneEx:[],
     };
   }
   removeItem = (ExName) => {
@@ -38,12 +39,29 @@ export default class ArmsExercises extends Component {
   // componentDidMount() {
   //   this.setState({ Arms: this.props.Arms });
   // }
+
+  AddExercise = (Ex, index) => {
+    const newArray = this.state.Arms;
+    // for (let i = 0; i < newArray.length; i++) {
+    //   if (newArray[i].name === Ex.name) {
+    //    // newArray[i] = Ex;
+    //    console.log("Done!!")
+    //     console.log(newArray)
+    //   }
+    // }
+    newArray[index].done=true
+    
+    this.setState({ Arms: newArray });
+   // console.log(this.state.Arms);
+  };
+
   render() {
     const Arms = this.state.Arms.map((item, index) => {
       return (
         <ArmsDay
           Ex_Arms={item.name}
           key={index}
+          num={index}
           rep={item.reps}
           set={item.sets}
           image={item.image}
@@ -51,9 +69,11 @@ export default class ArmsExercises extends Component {
           remove={this.removeItem}
           edit={this.EditItem}
           addToHistory={item}
+          add={this.AddExercise}
         />
       );
     });
+    console.log(this.state.Arms);
     return <div>{Arms}</div>;
   }
 }

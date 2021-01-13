@@ -6,6 +6,11 @@
   border: 1px solid #282c34 ;
   margin: 20px;
 }
+.form{
+  border: 1px solid #282c34 ;
+  margin: 20px;
+  padding: 10px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

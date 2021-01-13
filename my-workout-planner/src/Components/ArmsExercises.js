@@ -73,7 +73,7 @@ export default class ArmsExercises extends Component {
         />
       );
     });
-    console.log(this.state.Arms);
+    // console.log(this.state.Arms);
     return <div>{Arms}</div>;
   }
 }

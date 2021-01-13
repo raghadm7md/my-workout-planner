@@ -29,23 +29,14 @@ export default class ArmsDay extends Component {
     this.props.edit(newUpdate, this.props.Ex_Arms);
   };
 
-  // componentWillMount = () => {
-  //   this.selectedCheckboxes = new Set();
-  // }
   //#################
   handelClike = (event) => {
     event.preventDefault();
     this.props.remove(this.props.Ex_Arms);
   };
-
+  //#################
   toggleCheckboxChange = () => {
-    // if (this.state.Exercise.Done === undefined) {
-    //   this.state.Exercise["Done"] = true;
-      this.props.add(this.state.Exercise, this.props.num);
-    //   console.log(this.state.Exercise);
-    // } else {
-    //   this.props.add(this.state.Exercise);
-    // }
+    this.props.add(this.state.Exercise, this.props.num);
   };
   render() {
     return (
@@ -62,9 +53,9 @@ export default class ArmsDay extends Component {
               <h2>{this.props.Ex_Arms}</h2>
             </div>
             <div class="col">
-              <button onClick={this.toggleCheckboxChange}> 
-              {this.state.Exercise.done? "yaaaaa!!" : "Done it "}
-               </button>
+              <button onClick={this.toggleCheckboxChange}>
+                {this.state.Exercise.done ? "yaaaaa!!" : "Done it "}
+              </button>
               <img src={this.props.image} width={150} />
             </div>
           </div>
@@ -88,15 +79,3 @@ export default class ArmsDay extends Component {
   }
 }
 
-// const newweight = this.state.weight;
-
-// localStorage.setItem("newweight", newUpdate);
-// console.log(localStorage);
-
-// #################
-// componentDidMount() {
-//   const newweight = localStorage.getItem("newweight");
-//   console.log(newweight);
-//   this.setState({ weight: newweight });
-//   this.props.edit(newweight)
-// }

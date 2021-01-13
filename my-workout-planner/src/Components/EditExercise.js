@@ -21,7 +21,6 @@ export default class EditExercise extends Component {
             <label class="col-form-label">Weight :</label>
             <input
               class="form-control"
-              id="Reps"
               onChange={(event) => {
                 this.setState({ weight: event.target.value });
               }}

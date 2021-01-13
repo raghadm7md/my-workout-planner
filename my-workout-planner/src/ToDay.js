@@ -5,8 +5,7 @@ import ArmsExercises from "./Components/ArmsExercises";
 import BackExercise from "./Components/BackExercise";
 import LegExercises from "./Components/LegExercises";
 import ChestExercise from "./Components/ChestExercise";
-import AbsDay from "./Components/AbsDay";
-import ArmsDay from "./Components/ArmsDay";
+
 
 class ToDay extends Component {
   
@@ -62,7 +61,8 @@ class ToDay extends Component {
                 />
               </div>
               <div class="col">
-                <h1>Done !!</h1>
+                <h1> - Qoute of the day - </h1>
+                <h1> " {this.props.Qoute} " </h1>
               </div>
             </div>
           </div>

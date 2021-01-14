@@ -37,18 +37,30 @@ export default class BackExercise extends Component {
       }
     }
   };
+  AddExercise = (index) => {
+    const newArray = this.state.back;
+    
+    newArray[index].done=true
+    
+    this.setState({ back: newArray });
+  };
+
+
   render() {
     const back = this.state.back.map((item, index) => {
       return (
         <BackDay
           Ex_Back={item.name}
           key={index}
+          num={index}
           rep={item.reps}
           set={item.sets}
           image={item.image}
           weight={item.weight}
           remove={this.removeItem}
           edit={this.EditItem}
+          addToHistory={item}
+          add={this.AddExercise}
         />
       );
     });

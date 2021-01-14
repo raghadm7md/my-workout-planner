@@ -37,18 +37,26 @@ export default class ChestExercise extends Component {
       }
     }
   };
+  AddExercise = (index) => {
+    const newArray = this.state.chest;
+    newArray[index].done = true;
+    this.setState({ chest: newArray });
+  };
   render() {
     const chest = this.state.chest.map((item, index) => {
       return (
         <ChestDay
           Ex_Chest={item.name}
           key={index}
+          num={index}
           rep={item.reps}
           set={item.sets}
           image={item.image}
           weight={item.weight}
           remove={this.removeItem}
           edit={this.EditItem}
+          addToHistory={item}
+          add={this.AddExercise}
         />
       );
     });

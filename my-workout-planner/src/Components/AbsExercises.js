@@ -19,17 +19,28 @@ export default class AbsExercises extends Component {
       }
     }
   };
+  AddExercise = (Ex,index) => {
+    const newArray = this.state.Abs;
+    
+    newArray[index].done=true
+    
+    this.setState({ Abs: newArray });
+  };
   
   render() {
+    console.log(this.state.Abs)
     const Abs = this.state.Abs.map((item, index) => {
       return (
         <AbsDay
           Ex_Abs={item.name}
           key={index}
+          num={index}
           rep={item.reps}
           set={item.sets}
           image={item.image}
           remove={this.removeItem}
+          addToHistory={item}
+          add={this.AddExercise}
         />
       );
     });

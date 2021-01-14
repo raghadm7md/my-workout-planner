@@ -14,8 +14,7 @@ class App extends Component {
       Sets: "",
       Reps: "",
       Weight: "",
-      radio:'',
-  
+      radio: "",
     };
     this.formSubmit = this.formSubmit.bind(this);
   }
@@ -32,127 +31,134 @@ class App extends Component {
     //     console.log('ERR: ', err);
     //   });
   }
-
   formSubmit = (event) => {
     event.preventDefault();
-    console.log("onSubmit!!!!!!")
+    console.log("onSubmit!!!!!!");
     let name = this.state.ExerciseName;
     let sets = this.state.Sets;
     let reps = this.state.Reps;
     let weight = this.state.Weight;
     let radio = this.state.radio;
-    let body = [...this.state.Body]
     let NewData = this.state.exercise;
-    const obj ={
-        "name": name,
-        "image":"",
-        "sets": sets,
-        "reps": reps,
-        "weight":weight
-      }
-    for (const key in NewData) {
-      if ( key === radio ){
-       // let body = NewData.radio
-        console.log(key + "  "+body)
-        body.push(obj)
-        NewData[radio] = [...body];
-      }
+    console.log(NewData);
+    const obj = {
+      name: name,
+      image: "",
+      sets: sets,
+      reps: reps,
+      weight: weight,
+    };
+    //###########################
+    if (radio === "Abs") {
+      console.log(radio);
+      console.log(NewData);
+      let abs = this.state.exercise.Abs;
+      abs.push(obj);
+      console.log(abs);
+      this.setState({ exercise: abs });
+      console.log("Dooonnnee!!!");
+    } else if (radio === "Arms") {
+    } else if (radio === "back") {
+    } else if (radio === "chest") {
+    } else if (radio === "legs") {
     }
-    console.log(body)
-    console.log(NewData)
-    //this.setState({Body : body})
+
+    
+    console.log(NewData);
+    this.setState({ exercise: NewData });
   };
   render() {
-    
     console.log(this.state.Body);
+    console.log(this.state.exercise);
+
     return (
       <div className="App">
         <h1>welcome to your fitness journey</h1>
         {/* <button onClick={this.Getquote}> Quote of the day </button> */}
         <div>
-          <form className="form" onSubmit={this.formSubmit} >
+          <form className="form" onSubmit={this.formSubmit}>
             Add your workout HERE!
             <div>
-            <label>Exercise name: </label>
-            <input
-              type="text"
-              onChange={(event) => {
-                this.setState({ ExerciseName: event.target.value });
-              }}
-            />
-            <label>Number of Sets: </label>
-            <input
-              type="text"
-              onChange={(event) => {
-                this.setState({ Sets: event.target.value });
-              }}
-            />
-            <label>Number of Reps: </label>
-            <input
-              type="text"
-              onChange={(event) => {
-                this.setState({ Reps: event.target.value });
-              }}
-            />
-            <label>How much of weight? </label>
-            <input
-              type="text"
-              onChange={(event) => {
-                this.setState({ Weight: event.target.value });
-              }}
-            />
+              <label>Exercise name: </label>
+              <input
+                type="text"
+                onChange={(event) => {
+                  this.setState({ ExerciseName: event.target.value });
+                }}
+              />
+              <label>Number of Sets: </label>
+              <input
+                type="text"
+                onChange={(event) => {
+                  this.setState({ Sets: event.target.value });
+                }}
+              />
+              <label>Number of Reps: </label>
+              <input
+                type="text"
+                onChange={(event) => {
+                  this.setState({ Reps: event.target.value });
+                }}
+              />
+              <label>How much of weight? </label>
+              <input
+                type="text"
+                onChange={(event) => {
+                  this.setState({ Weight: event.target.value });
+                }}
+              />
             </div>
             <div>
-            <input
-              type="radio"
-              value="Arms"
-              onChange={(event) => {
-                this.setState({ radio: event.target.value });
-              }}
-            />
-            <label for="male"> It is for your Arms?</label>
+              <input
+                type="radio"
+                value="Arms"
+                onChange={(event) => {
+                  this.setState({ radio: event.target.value });
+                }}
+              />
+              <label for="male"> It is for your Arms?</label>
             </div>
             <div>
-            <input
-              type="radio"
-              value="Abs"
-              onChange={(event) => {
-                this.setState({ radio: event.target.value });
-              }}
-            />
-            <label for="male"> It is for your Abs ?</label>
+              <input
+                type="radio"
+                value="Abs"
+                onChange={(event) => {
+                  this.setState({ radio: event.target.value });
+                }}
+              />
+              <label for="male"> It is for your Abs ?</label>
             </div>
             <div>
-            <input
-              type="radio"
-              value="legs"
-              onChange={(event) => {
-                this.setState({ radio: event.target.value });
-              }}
-            />
-            <label for="male"> It is for your Legs ?</label>
+              <input
+                type="radio"
+                value="legs"
+                onChange={(event) => {
+                  this.setState({ radio: event.target.value });
+                }}
+              />
+              <label for="male"> It is for your Legs ?</label>
             </div>
             <div>
-            <input
-              type="radio"
-              value="back"
-              onChange={(event) => {
-                this.setState({ radio: event.target.value });
-              }}
-            />
-            <label for="male"> It is for your Back ?</label>
+              <input
+                type="radio"
+                value="back"
+                onChange={(event) => {
+                  this.setState({ radio: event.target.value });
+                }}
+              />
+              <label for="male"> It is for your Back ?</label>
             </div>
             <div>
-            <input
-              type="radio"
-              value="chest"
-              onChange={(event) => {
-                this.setState({ radio: event.target.value });
-              }}
-            />
-            <label for="male"> It is for your Chest ?</label>
+              <input
+                type="radio"
+                value="chest"
+                onChange={(event) => {
+                  this.setState({ radio: event.target.value });
+                }}
+              />
+              <label for="male"> It is for your Chest ?</label>
             </div>
-            <button type="submit" >Submit</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
         <ToDay exercise={this.state.exercise} Qoute={this.state.quote} />
@@ -162,3 +168,4 @@ class App extends Component {
 }
 
 export default App;
+

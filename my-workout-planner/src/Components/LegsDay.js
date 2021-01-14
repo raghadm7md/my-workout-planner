@@ -7,6 +7,7 @@ export default class LegsDay extends Component {
     this.state = {
       showComponent: false,
       weight: this.props.weight,
+      Exercise: this.props.addToHistory
     };
   }
   EditAbsExercises = () => {
@@ -26,6 +27,9 @@ export default class LegsDay extends Component {
     event.preventDefault();
     this.props.remove(this.props.Ex_legs);
   };
+  MarkedDoneExercise = () => {
+    this.props.add(this.props.num);
+  };
   render() {
     return (
       <div className="Ex">
@@ -41,18 +45,10 @@ export default class LegsDay extends Component {
               <h2>{this.props.Ex_legs}</h2>
             </div>
             <div class="col">
-              {/* <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  //#######################
-                  value={this.state.Exercises}
-                  checked={this.state.isChecked}
-                  onChange={(event) => this.toggleCheckboxChange(event)}
-                />
-                <label class="form-check-label">Did it!!</label>
-              </div> */}
               <img src={this.props.image} width={150} />
+              <button onClick={this.MarkedDoneExercise}>
+                {this.state.Exercise.done ? "yaaaaa!!" : "Done it "}
+              </button>
             </div>
           </div>
           <div class="row">

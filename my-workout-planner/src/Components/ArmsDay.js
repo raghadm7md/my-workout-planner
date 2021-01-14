@@ -8,10 +8,8 @@ export default class ArmsDay extends Component {
     this.state = {
       showComponent: false,
       weight: this.props.weight,
-      //#######################
       Exercise: this.props.addToHistory,
       isChecked: false,
-      litsOfEx: [],
     };
   }
   EditAbsExercises = () => {
@@ -22,21 +20,18 @@ export default class ArmsDay extends Component {
     this.setState({ showComponent: false });
     console.log(this.state.showComponent);
   };
-  //######################
   UpdateEx_weight = (newUpdate) => {
     this.setState({ weight: newUpdate });
     console.log(newUpdate);
     this.props.edit(newUpdate, this.props.Ex_Arms);
   };
 
-  //#################
   handelClike = (event) => {
     event.preventDefault();
     this.props.remove(this.props.Ex_Arms);
   };
-  //#################
-  toggleCheckboxChange = () => {
-    this.props.add(this.state.Exercise, this.props.num);
+  MarkedDoneExercise = () => {
+    this.props.add(this.props.num);
   };
   render() {
     return (
@@ -53,10 +48,10 @@ export default class ArmsDay extends Component {
               <h2>{this.props.Ex_Arms}</h2>
             </div>
             <div class="col">
-              <button onClick={this.toggleCheckboxChange}>
+              <img src={this.props.image} width={150} />
+              <button onClick={this.MarkedDoneExercise}>
                 {this.state.Exercise.done ? "yaaaaa!!" : "Done it "}
               </button>
-              <img src={this.props.image} width={150} />
             </div>
           </div>
           <div class="row">
@@ -78,4 +73,3 @@ export default class ArmsDay extends Component {
     );
   }
 }
-

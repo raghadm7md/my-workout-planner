@@ -7,11 +7,11 @@ export default class EditExercise extends Component {
     };
   }
 
-  Updateweight =(event)=>{
+  Updateweight = (event) => {
     event.preventDefault();
     this.props.Update(this.state.weight);
     this.props.hide();
-  }
+  };
 
   render() {
     return (
@@ -36,7 +36,11 @@ export default class EditExercise extends Component {
           >
             Cancel
           </button>
-          <button onClick={this.Updateweight} type="button" class="btn btn-primary">
+          <button
+            onClick={this.Updateweight}
+            type="button"
+            class="btn btn-primary"
+          >
             Update
           </button>
         </div>

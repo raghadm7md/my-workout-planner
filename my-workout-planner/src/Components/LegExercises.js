@@ -20,6 +20,7 @@ export default class LegExercises extends Component {
     }
   };
 
+
   EditItem = (newW, item) => {
     const newArray = this.state.legs;
     console.log(newArray);
@@ -37,18 +38,28 @@ export default class LegExercises extends Component {
       }
     }
   };
+
+  AddExercise = (index) => {
+    const newArray = this.state.legs;
+    newArray[index].done = true;
+    this.setState({ legs: newArray });
+  };
+
   render() {
     const legs = this.props.legs.map((item, index) => {
       return (
         <LegsDay
           Ex_legs={item.name}
           key={index}
+          num={index}
           rep={item.reps}
           set={item.sets}
           image={item.image}
           weight={item.weight}
           remove={this.removeItem}
           edit={this.EditItem}
+          addToHistory={item}
+          add={this.AddExercise}
         />
       );
     });

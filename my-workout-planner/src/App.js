@@ -19,17 +19,17 @@ class App extends Component {
     this.formSubmit = this.formSubmit.bind(this);
   }
   componentDidMount() {
-    let API =`http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en`
-      axios.get(API)
-      .then((response) => {
-        console.log('RESPONSE: ', response);
-        console.log('DATA: ', response.data);
-        let newQoute=response.data.quoteText
-        this.setState({quote : newQoute })
-      })
-      .catch((err) => {
-        console.log('ERR: ', err);
-      });
+    // let API =`http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en`
+    //   axios.get(API)
+    //   .then((response) => {
+    //     console.log('RESPONSE: ', response);
+    //     console.log('DATA: ', response.data);
+    //     let newQoute=response.data.quoteText
+    //     this.setState({quote : newQoute })
+    //   })
+    //   .catch((err) => {
+    //     console.log('ERR: ', err);
+    //   });
   }
   formSubmit = (event) => {
     event.preventDefault();
@@ -91,8 +91,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>welcome to your fitness journey</h1>
-        <div>
+       <div>
+          <img className="image1" src='https://cdn.mos.cms.futurecdn.net/h2QrfCQi872ZEdKHP9qHgY-1200-80.jpg'></img>
+          <div class="top-left"><h1>welcome to your fitness journey</h1></div>
+        <img className="image2" src='https://images.firstpost.com/wp-content/uploads/2020/07/gym-shutterstock-640.jpg'></img>
+        </div>
+
+        <div class="container">
+            <div class="row row-cols-2">
+              <div class="col-sm">
+              <div>
           <form className="form" onSubmit={this.formSubmit}>
             Add your workout HERE!
             <div>
@@ -144,7 +152,16 @@ class App extends Component {
             <button type="submit">Submit</button>
           </form>
         </div>
-        <ToDay exercise={this.state.exercise} Qoute={this.state.quote} />
+              </div>
+              <div class="col">
+               
+  <ToDay exercise={this.state.exercise} Qoute={this.state.quote} />
+              </div>
+            </div>
+          </div>
+
+       
+      
       </div>
     );
   }

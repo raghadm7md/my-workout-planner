@@ -12,12 +12,13 @@ It a website that organizes my daily routine workout. This website facilitates e
 
 ## Wireframes
 ![WF_P2](https://media.git.generalassemb.ly/user/33237/files/547d7e00-5815-11eb-8fea-4590fa84821d)
-* Homepage
+### Homepage 
 ![homepage](https://media.git.generalassemb.ly/user/33237/files/c6a98f00-5824-11eb-9749-88ae31a07213)
 
 
 ## Technologies used
-* React ![1200px-React-icon svg](https://media.git.generalassemb.ly/user/33237/files/41b77900-5816-11eb-983d-407801fcc903| width=100)
+* React ![1200px-React-icon svg](https://media.git.generalassemb.ly/user/33237/files/41b77900-5816-11eb-983d-407801fcc903)
+<img src="https://media.git.generalassemb.ly/user/33237/files/41b77900-5816-11eb-983d-407801fcc903" width="100" height="100">
 * JavaScript and JSX ![J](https://media.git.generalassemb.ly/user/33237/files/92cb6b00-581e-11eb-9980-e0f292130990)
 * HTML ![1200px-HTML5_logo_and_wordmark svg](https://media.git.generalassemb.ly/user/33237/files/cf976200-581e-11eb-9409-c5a815481c93)
 * CSS ![1200px-CSS 3 svg](https://media.git.generalassemb.ly/user/33237/files/ec339a00-581e-11eb-8410-b5feb521a602)

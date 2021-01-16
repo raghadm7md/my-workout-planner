@@ -19,7 +19,7 @@ class App extends Component {
     this.formSubmit = this.formSubmit.bind(this);
   }
   componentDidMount() {
-    let API = `http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en`;
+    let API = `https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en`;
     axios
       .get(API)
       .then((response) => {

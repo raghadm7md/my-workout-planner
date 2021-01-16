@@ -25,7 +25,7 @@ It a website that organizes my daily routine workout. This website facilitates e
 
 
 ## Live Demo
-<!-- [Links name](linkurl)  -->
+[My workout planner](https://pages.git.generalassemb.ly/raghadm7md/My-workout-planner/) 
 
 
 ## Future works 

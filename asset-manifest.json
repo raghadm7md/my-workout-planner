@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/raghadm7md/My-workout-planner/static/css/main.409218cd.chunk.css",
+    "main.js": "/raghadm7md/My-workout-planner/static/js/main.254aa720.chunk.js",
+    "main.js.map": "/raghadm7md/My-workout-planner/static/js/main.254aa720.chunk.js.map",
+    "runtime-main.js": "/raghadm7md/My-workout-planner/static/js/runtime-main.c187a6be.js",
+    "runtime-main.js.map": "/raghadm7md/My-workout-planner/static/js/runtime-main.c187a6be.js.map",
+    "static/js/2.3bb12ac0.chunk.js": "/raghadm7md/My-workout-planner/static/js/2.3bb12ac0.chunk.js",
+    "static/js/2.3bb12ac0.chunk.js.map": "/raghadm7md/My-workout-planner/static/js/2.3bb12ac0.chunk.js.map",
+    "static/js/3.196a45f5.chunk.js": "/raghadm7md/My-workout-planner/static/js/3.196a45f5.chunk.js",
+    "static/js/3.196a45f5.chunk.js.map": "/raghadm7md/My-workout-planner/static/js/3.196a45f5.chunk.js.map",
+    "index.html": "/raghadm7md/My-workout-planner/index.html",
+    "static/css/main.409218cd.chunk.css.map": "/raghadm7md/My-workout-planner/static/css/main.409218cd.chunk.css.map",
+    "static/js/2.3bb12ac0.chunk.js.LICENSE.txt": "/raghadm7md/My-workout-planner/static/js/2.3bb12ac0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c187a6be.js",
+    "static/js/2.3bb12ac0.chunk.js",
+    "static/css/main.409218cd.chunk.css",
+    "static/js/main.254aa720.chunk.js"
+  ]
+}

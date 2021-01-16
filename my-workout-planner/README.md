@@ -17,7 +17,7 @@ It a website that organizes my daily routine workout. This website facilitates e
 
 
 ## Technologies used
-* React <img src="https://media.git.generalassemb.ly/user/33237/files/41b77900-5816-11eb-983d-407801fcc903" width="50" height="50">
+* React <img src="https://media.git.generalassemb.ly/user/33237/files/41b77900-5816-11eb-983d-407801fcc903" width="23" height="25">
 * JavaScript and JSX <img src="https://media.git.generalassemb.ly/user/33237/files/92cb6b00-581e-11eb-9980-e0f292130990" width="50" height="50">
 <!-- ![J](https://media.git.generalassemb.ly/user/33237/files/92cb6b00-581e-11eb-9980-e0f292130990) -->
 * HTML <img src="https://media.git.generalassemb.ly/user/33237/files/cf976200-581e-11eb-9409-c5a815481c93" width="50" height="50">

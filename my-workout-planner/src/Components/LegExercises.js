@@ -20,7 +20,6 @@ export default class LegExercises extends Component {
     }
   };
 
-
   EditItem = (newW, item) => {
     const newArray = this.state.legs;
     console.log(newArray);
@@ -44,9 +43,11 @@ export default class LegExercises extends Component {
     newArray[index].done = true;
     this.setState({ legs: newArray });
   };
-
+  removeAll = () => {
+    this.setState({ legs: [] });
+  };
   render() {
-    const legs = this.props.legs.map((item, index) => {
+    const legs = this.state.legs.map((item, index) => {
       return (
         <LegsDay
           Ex_legs={item.name}
@@ -63,6 +64,13 @@ export default class LegExercises extends Component {
         />
       );
     });
-    return <div>{legs}</div>;
+    return (
+      <div>
+        {legs}
+        <button onClick={this.removeAll} class="btn btn-secondary">
+          Delete all Exercises
+        </button>
+      </div>
+    );
   }
 }

@@ -42,6 +42,9 @@ export default class ChestExercise extends Component {
     newArray[index].done = true;
     this.setState({ chest: newArray });
   };
+  removeAll = () => {
+    this.setState({ chest: [] });
+  };
   render() {
     const chest = this.state.chest.map((item, index) => {
       return (
@@ -60,6 +63,13 @@ export default class ChestExercise extends Component {
         />
       );
     });
-    return <div>{chest}</div>;
+    return (
+      <div>
+        {chest}
+        <button onClick={this.removeAll} class="btn btn-secondary">
+          Delete all Exercises
+        </button>
+      </div>
+    );
   }
 }

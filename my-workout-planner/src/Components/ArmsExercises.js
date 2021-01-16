@@ -41,9 +41,9 @@ export default class ArmsExercises extends Component {
     newArray[index].done = true;
     this.setState({ Arms: newArray });
   };
-  // removeAll=()=>{
-  //   this.setState({Arms:[]})
-  // }
+  removeAll=()=>{
+    this.setState({Arms:[]})
+  }
 
   render() {
     const Arms = this.state.Arms.map((item, index) => {
@@ -63,11 +63,12 @@ export default class ArmsExercises extends Component {
         />
       );
     });
-    // console.log(this.state.Arms);
     return (
       <div>
-        {/* <button onClick={this.removeAll}>hhhiiii!!</button> */}
         {Arms}
+        <button onClick={this.removeAll} class="btn btn-secondary">
+                Delete all Exercises
+              </button>
       </div>
     );
   }

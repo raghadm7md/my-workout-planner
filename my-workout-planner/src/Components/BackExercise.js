@@ -16,7 +16,7 @@ export default class BackExercise extends Component {
       if (newArray[i].name === item) {
         let val = newArray[i];
         val.weight = newW;
-         newArray.findIndex((element, index) => {
+        newArray.findIndex((element, index) => {
           if (element === val) {
             newArray.splice(index, 1, val);
             this.setState({ back: newArray });
@@ -39,12 +39,15 @@ export default class BackExercise extends Component {
   };
   AddExercise = (index) => {
     const newArray = this.state.back;
-    
-    newArray[index].done=true
-    
+
+    newArray[index].done = true;
+
     this.setState({ back: newArray });
   };
 
+  removeAll = () => {
+    this.setState({ back: [] });
+  };
 
   render() {
     const back = this.state.back.map((item, index) => {
@@ -64,6 +67,13 @@ export default class BackExercise extends Component {
         />
       );
     });
-    return <div>{back}</div>;
+    return (
+      <div>
+        {back}
+        <button onClick={this.removeAll} class="btn btn-secondary">
+          Delete all Exercises
+        </button>
+      </div>
+    );
   }
 }

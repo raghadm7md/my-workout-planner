@@ -5,7 +5,7 @@ export default class AbsExercises extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Abs: this.props.Abs
+      Abs: this.props.Abs,
     };
   }
 
@@ -19,16 +19,19 @@ export default class AbsExercises extends Component {
       }
     }
   };
-  AddExercise = (Ex,index) => {
+  AddExercise = (Ex, index) => {
     const newArray = this.state.Abs;
-    
-    newArray[index].done=true
-    
+
+    newArray[index].done = true;
+
     this.setState({ Abs: newArray });
   };
-  
+  removeAll = () => {
+    this.setState({ Abs: [] });
+  };
+
   render() {
-    console.log(this.state.Abs)
+    console.log(this.state.Abs);
     const Abs = this.state.Abs.map((item, index) => {
       return (
         <AbsDay
@@ -44,6 +47,13 @@ export default class AbsExercises extends Component {
         />
       );
     });
-    return <div>{Abs}</div>;
+    return (
+      <div>
+        {Abs}
+        <button onClick={this.removeAll} class="btn btn-secondary">
+          Delete all Exercises
+        </button>
+      </div>
+    );
   }
 }

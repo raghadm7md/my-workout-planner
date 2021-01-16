@@ -17,12 +17,15 @@ It a website that organizes my daily routine workout. This website facilitates e
 
 
 ## Technologies used
-* React ![1200px-React-icon svg](https://media.git.generalassemb.ly/user/33237/files/41b77900-5816-11eb-983d-407801fcc903)
-<img src="https://media.git.generalassemb.ly/user/33237/files/41b77900-5816-11eb-983d-407801fcc903" width="100" height="100">
-* JavaScript and JSX ![J](https://media.git.generalassemb.ly/user/33237/files/92cb6b00-581e-11eb-9980-e0f292130990)
-* HTML ![1200px-HTML5_logo_and_wordmark svg](https://media.git.generalassemb.ly/user/33237/files/cf976200-581e-11eb-9409-c5a815481c93)
-* CSS ![1200px-CSS 3 svg](https://media.git.generalassemb.ly/user/33237/files/ec339a00-581e-11eb-8410-b5feb521a602)
-* bootstrap ![bootstrap](https://media.git.generalassemb.ly/user/33237/files/2dc44500-581f-11eb-9cf9-a6fefb7aa1e7)
+* React <img src="https://media.git.generalassemb.ly/user/33237/files/41b77900-5816-11eb-983d-407801fcc903" width="100" height="100">
+* JavaScript and JSX <img src="https://media.git.generalassemb.ly/user/33237/files/92cb6b00-581e-11eb-9980-e0f292130990" width="100" height="100">
+<!-- ![J](https://media.git.generalassemb.ly/user/33237/files/92cb6b00-581e-11eb-9980-e0f292130990) -->
+* HTML <img src="https://media.git.generalassemb.ly/user/33237/files/cf976200-581e-11eb-9409-c5a815481c93" width="100" height="100">
+<!-- ![1200px-HTML5_logo_and_wordmark svg](https://media.git.generalassemb.ly/user/33237/files/cf976200-581e-11eb-9409-c5a815481c93) -->
+* CSS <img src="https://media.git.generalassemb.ly/user/33237/files/ec339a00-581e-11eb-8410-b5feb521a602" width="100" height="100">
+<!-- ![1200px-CSS 3 svg](https://media.git.generalassemb.ly/user/33237/files/ec339a00-581e-11eb-8410-b5feb521a602) -->
+* bootstrap <img src="https://media.git.generalassemb.ly/user/33237/files/2dc44500-581f-11eb-9cf9-a6fefb7aa1e7" width="100" height="100">
+<!-- ![bootstrap](https://media.git.generalassemb.ly/user/33237/files/2dc44500-581f-11eb-9cf9-a6fefb7aa1e7) -->
 
 
 ## Live Demo

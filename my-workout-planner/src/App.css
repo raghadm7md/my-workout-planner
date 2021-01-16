@@ -1,28 +1,24 @@
 .App {
   text-align: center;
+  font-family:Palatino, serif;
+    
 }
 .Ex {
   border: 1px solid #282c34;
   margin: 20px;
+  padding: 10px;
 }
 .form {
-  /* border: 1px solid #282c34; */
-  /* padding: 20px; */
-  /* position: absolute; */
-  right: 0;
+  border: 1px solid #282c34;
+  left: 0;
   margin: 20px;
   max-width: 300px;
   padding: 16px;
   background-color: white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 .image1 {
   /* position: absolute; */
-  width: 1000px;
+  width: 80%;
   top: 10px;
   left: 10px;
   z-index: 1;
@@ -30,14 +26,27 @@
 .image2 {
   position: absolute;
   /* width: 500px; */
-  bottom: 250px;
+  bottom: 200px;
   left: 70px;
   z-index: 2;
 }
 .top-left {
   position: absolute;
-  top: 50px;
+  top: 60px;
+  font-style: italic;
   left: 250px;
+  padding: 20px;
+  background-color: rgb(235, 235, 235);
+  opacity: 0.6;
+}
+
+.line {
+  border: 2px solid rgb(161, 161, 161);
+  border-radius: 5px;
+}
+.menu{
+  margin: 20px ;
+
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -68,4 +77,8 @@
   to {
     transform: rotate(360deg);
   }
+} */
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
 } */

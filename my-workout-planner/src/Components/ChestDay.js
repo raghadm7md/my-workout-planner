@@ -33,9 +33,6 @@ export default class ChestDay extends Component {
     return (
       <div className="Ex">
         <div class="container">
-          <button onClick={this.EditAbsExercises} class="btn btn-secondary">
-            Edit
-          </button>
           {this.state.showComponent ? (
             <EditExercise hide={this.hide} Update={this.UpdateEx_weight} />
           ) : null}
@@ -45,9 +42,6 @@ export default class ChestDay extends Component {
             </div>
             <div class="col">
               <img src={this.props.image} width={150} />
-              <button onClick={this.MarkedDoneExercise}>
-                {this.state.Exercise.done ? "yaaaaa!!" : "Done it "}
-              </button>
             </div>
           </div>
           <div class="row">
@@ -61,9 +55,17 @@ export default class ChestDay extends Component {
               <h4>weight= {this.props.weight}</h4>
             </div>
           </div>
-          <button onClick={this.handelClike} class="btn btn-secondary">
-            delete
-          </button>
+        </div>
+        <div class="modal-footer">
+        <button onClick={this.handelClike} class="btn btn-secondary">
+          delete
+        </button>
+        <button onClick={this.EditAbsExercises} class="btn btn-secondary">
+          Edit
+        </button>
+        <button onClick={this.MarkedDoneExercise} class="btn btn-primary">
+          {this.state.Exercise.done ? "yaaaaa!!" : "Done it "}
+        </button>
         </div>
       </div>
     );

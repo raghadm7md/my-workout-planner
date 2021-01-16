@@ -25,9 +25,6 @@ export default class AbsDay extends Component {
             </div>
             <div class="col">
               <img src={this.props.image} width={150} />
-              <button onClick={this.MarkedDoneExercise}>
-                {this.state.Exercise.done ? "yaaaaa!!" : "Done it "}
-              </button>
             </div>
           </div>
           <div class="row">
@@ -37,9 +34,16 @@ export default class AbsDay extends Component {
             <div class="col">
               <h4>Sets = {this.props.rep}</h4>
             </div>
-            <div class="col">
+            <div class="col"></div>
+            <div class="modal-footer">
               <button onClick={this.handelClike} class="btn btn-secondary">
                 delete
+              </button>
+              <button onClick={this.EditAbsExercises} class="btn btn-secondary">
+                Edit
+              </button>
+              <button onClick={this.MarkedDoneExercise} class="btn btn-primary">
+                {this.state.Exercise.done ? "yaaaaa!!" : "Done it "}
               </button>
             </div>
           </div>

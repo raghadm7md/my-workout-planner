@@ -19,21 +19,21 @@ class App extends Component {
     this.formSubmit = this.formSubmit.bind(this);
   }
   componentDidMount() {
-    // let API =`http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en`
-    //   axios.get(API)
-    //   .then((response) => {
-    //     console.log('RESPONSE: ', response);
-    //     console.log('DATA: ', response.data);
-    //     let newQoute=response.data.quoteText
-    //     this.setState({quote : newQoute })
-    //   })
-    //   .catch((err) => {
-    //     console.log('ERR: ', err);
-    //   });
+    let API = `http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en`;
+    axios
+      .get(API)
+      .then((response) => {
+        console.log("RESPONSE: ", response);
+        console.log("DATA: ", response.data);
+        let newQoute = response.data.quoteText;
+        this.setState({ quote: newQoute });
+      })
+      .catch((err) => {
+        console.log("ERR: ", err);
+      });
   }
   formSubmit = (event) => {
     event.preventDefault();
-    console.log("onSubmit!!!!!!");
     let name = this.state.ExerciseName;
     let sets = this.state.Sets;
     let reps = this.state.Reps;
@@ -91,77 +91,88 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <div>
-          <img className="image1" src='https://cdn.mos.cms.futurecdn.net/h2QrfCQi872ZEdKHP9qHgY-1200-80.jpg'></img>
-          <div class="top-left"><h1>welcome to your fitness journey</h1></div>
-        <img className="image2" src='https://images.firstpost.com/wp-content/uploads/2020/07/gym-shutterstock-640.jpg'></img>
+        <div>
+          <img
+            className="image1"
+            src="https://cdn.mos.cms.futurecdn.net/h2QrfCQi872ZEdKHP9qHgY-1200-80.jpg"
+          ></img>
+          <div class="top-left">
+            <h1>Welcome to your fitness journey</h1>
+          </div>
+          <img
+            className="image2"
+            src="https://images.firstpost.com/wp-content/uploads/2020/07/gym-shutterstock-640.jpg"
+          ></img>
         </div>
 
         <div class="container">
-            <div class="row row-cols-2">
-              <div class="col-sm">
+          <div class="row row-cols-2 ">
+            <div class="col-3">
               <div>
-          <form className="form" onSubmit={this.formSubmit}>
-            Add your workout HERE!
-            <div>
-              <label>Exercise name: </label>
-              <input
-                value={this.state.ExerciseName}
-                type="text"
-                onChange={(event) => {
-                  this.setState({ ExerciseName: event.target.value });
-                }}
-              />
-              <label>Number of Sets: </label>
-              <input
-                value={this.state.Sets}
-                type="text"
-                onChange={(event) => {
-                  this.setState({ Sets: event.target.value });
-                }}
-              />
-              <label>Number of Reps: </label>
-              <input
-                value={this.state.Reps}
-                type="text"
-                onChange={(event) => {
-                  this.setState({ Reps: event.target.value });
-                }}
-              />
-              <label>How much of weight? </label>
-              <input
-                value={this.state.Weight}
-                type="text"
-                onChange={(event) => {
-                  this.setState({ Weight: event.target.value });
-                }}
-              />
-            </div>
-            <div>    
-            <select value={this.state.SelectedValue} onChange={(event) => {
-                  this.setState({ SelectedValue: event.target.value });
-                }} >
-              <option value="" >Select here</option>
-              <option value="Arms" >Arms</option>
-              <option value="Abs" >Abs</option>
-              <option value="legs">legs</option>
-              <option value="back">back</option>
-              <option value="chest">chest</option>
-            </select>
-            </div>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+                <form className="form" onSubmit={this.formSubmit}>
+                  <h4> Add your workout HERE! </h4>
+                  <div>
+                    <label>Exercise name: </label>
+                    <input
+                      value={this.state.ExerciseName}
+                      type="text"
+                      onChange={(event) => {
+                        this.setState({ ExerciseName: event.target.value });
+                      }}
+                    />
+                    <label>Number of Sets: </label>
+                    <input
+                      value={this.state.Sets}
+                      type="text"
+                      onChange={(event) => {
+                        this.setState({ Sets: event.target.value });
+                      }}
+                    />
+                    <label>Number of Reps: </label>
+                    <input
+                      value={this.state.Reps}
+                      type="text"
+                      onChange={(event) => {
+                        this.setState({ Reps: event.target.value });
+                      }}
+                    />
+                    <label>How much of weight? </label>
+                    <input
+                      value={this.state.Weight}
+                      type="text"
+                      onChange={(event) => {
+                        this.setState({ Weight: event.target.value });
+                      }}
+                    />
+                  </div>
+                  <div className="menu">
+                    <select
+                      value={this.state.SelectedValue}
+                      onChange={(event) => {
+                        this.setState({ SelectedValue: event.target.value });
+                      }}
+                    >
+                      <option value="">Select here</option>
+                      <option value="Arms">Arms</option>
+                      <option value="Abs">Abs</option>
+                      <option value="legs">legs</option>
+                      <option value="back">back</option>
+                      <option value="chest">chest</option>
+                    </select>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </form>
               </div>
-              <div class="col">
-               
-  <ToDay exercise={this.state.exercise} Qoute={this.state.quote} />
-              </div>
+            </div>
+            <div class="col-9">
+              <ToDay exercise={this.state.exercise} Qoute={this.state.quote} />
             </div>
           </div>
-
-       
-      
+        </div>
       </div>
     );
   }

@@ -12,7 +12,7 @@ class ToDay extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="menu" >
           <Link to="/Abs">Abs workout</Link>
           <span> || </span>
           <Link to="/Arms">Arms workout </Link>
@@ -22,10 +22,10 @@ class ToDay extends Component {
           <Link to="/back">Back workout </Link>
           <span> || </span>
           <Link to="/chest">Chest workout </Link>
-
+          <hr className="line"/>
           <div class="container">
             <div class="row row-cols-2">
-              <div class="col">
+              <div class="col-8">
                 <Route
                   path="/Abs"
                   render={(props) => (
@@ -60,9 +60,9 @@ class ToDay extends Component {
                   )}
                 />
               </div>
-              <div class="col">
+              <div class="col-4">
                 <h3> - Qoute of the day - </h3>
-                <p> " {this.props.Qoute} " </p>
+                <h4> " {this.props.Qoute} " </h4>
               </div>
             </div>
           </div>

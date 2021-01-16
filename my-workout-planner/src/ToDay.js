@@ -61,7 +61,7 @@ class ToDay extends Component {
                 />
               </div>
               <div class="col-4">
-                <h3> - Qoute of the day - </h3>
+                <h3> - Quote of the day - </h3>
                 <h4> " {this.props.Qoute} " </h4>
               </div>
             </div>

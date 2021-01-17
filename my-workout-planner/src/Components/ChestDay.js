@@ -46,10 +46,10 @@ export default class ChestDay extends Component {
           </div>
           <div class="row">
             <div class="col">
-              <h4>Reps= {this.props.set}</h4>
+              <h4>Sets= {this.props.set}</h4>
             </div>
             <div class="col">
-              <h4>Sets= {this.props.rep}</h4>
+              <h4>Reps= {this.props.rep}</h4>
             </div>
             <div class="col">
               <h4>weight= {this.props.weight}</h4>

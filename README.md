@@ -1,3 +1,4 @@
+### Part of General Assemply internship
 # My workout planner
 It a website that organizes my daily routine workout. This website facilitates editing exercises and deletes exercises. Also, I can add new exercises. In addition to that, I can mark the exercise that I have done with. 
 
